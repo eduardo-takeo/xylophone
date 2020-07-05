@@ -1,7 +1,11 @@
 import 'package:audioplayers/audio_cache.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
-void main() => runApp(XylophoneApp());
+void main() {
+  runApp(XylophoneApp());
+  SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
+}
 
 class XylophoneApp extends StatelessWidget {
   void playSound(int note) {
